@@ -1,8 +1,9 @@
 'use client'
+
 import useSWR from 'swr'
 import { getCatalog } from '../api/axios'
 
-export function ProductsPage() {
+export default function ProductsPage() {
   const products = useSWR('/api/catalog', async () => getCatalog())
 
   return (
