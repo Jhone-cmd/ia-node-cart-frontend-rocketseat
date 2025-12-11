@@ -24,6 +24,10 @@
       "style": {
         "useImportType": "off"
       },
+      "nursery": {
+        "noLeakedRender": "off"
+      },
+      "a11y": "off",
       "recommended": true
     }
   }
