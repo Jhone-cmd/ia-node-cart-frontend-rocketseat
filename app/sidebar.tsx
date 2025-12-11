@@ -19,7 +19,7 @@ const navigation = [
   { name: 'Minhas Receitas', href: '/recipes', icon: ChefHat },
 ]
 
-export default function Sidebar() {
+export function Sidebar() {
   const pathname = usePathname()
 
   const [isOpen, setIsOpen] = useState(false)
