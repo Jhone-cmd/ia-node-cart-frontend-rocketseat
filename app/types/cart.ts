@@ -10,6 +10,7 @@ export type Cart = {
     id: number;
     name: string;
   };
+  total: number;
   items: {
     id: number;
     name: string;
