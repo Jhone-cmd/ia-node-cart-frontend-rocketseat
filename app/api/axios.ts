@@ -18,7 +18,7 @@ export const getCatalog = async (search = '') => {
 
 
 export const getCart = async () => {
-  const response = await api.get('/cart', {})
+  const response = await api.get('/cart');
   return response.data as Cart;
 }
 

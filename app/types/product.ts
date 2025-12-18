@@ -3,5 +3,9 @@ export type Product = {
   name: string
   description: string
   price: number
+  store: {
+    id: number
+    name: string
+  }
   embedding: number[] | null
 }
