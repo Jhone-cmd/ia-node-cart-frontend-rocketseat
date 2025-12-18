@@ -3,11 +3,12 @@
 import { useSearchParams } from 'next/navigation'
 import useSWR from 'swr'
 import { Input } from '@/components/ui/input'
-import { getCatalog } from '../api/axios'
+import { addToCart, getCatalog } from '../api/axios'
 import { Product } from '../types/product'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { Search, ShoppingCart } from 'lucide-react'
+import { toast } from 'sonner'
 
 export default function ProductsPage() {
   const searchParams = useSearchParams()
@@ -16,10 +17,10 @@ export default function ProductsPage() {
     getCatalog(search)
   )
 
-  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
-    window.history.pushState({}, '', `/products?search=${e.target.value}`)
+  const handleAddToCart = async (productId: number) => {
+    await addToCart(productId, 1);
+    toast.success('Produto adicionado ao carrinho!');
   }
-
   
   return (
     <div className="p-6 pt-20 lg:pt-6">
@@ -73,7 +74,7 @@ export default function ProductsPage() {
                   </div>
                 </div>
 
-                <Button className="w-full">
+                <Button className="w-full" onClick={() => handleAddToCart(product.id)}>
                   <ShoppingCart className="h-4 w-4 mr-2" />
                   Adicionar ao Carrinho
                 </Button>
