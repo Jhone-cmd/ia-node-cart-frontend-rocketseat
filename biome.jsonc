@@ -22,7 +22,12 @@
     "enabled": true,
     "rules": {
       "style": {
-        "useImportType": "off"
+        "useImportType": "off",
+        "useConsistentTypeDefinitions": "off",
+        "noNonNullAssertion": "off"
+      },
+      "suspicious": {
+        "useAwait": "off"
       },
       "nursery": {
         "noLeakedRender": "off"
