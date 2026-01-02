@@ -25,10 +25,19 @@
         "useImportType": "off",
         "useConsistentTypeDefinitions": "off",
         "noNonNullAssertion": "off",
-        "useAtIndex": "off"
+        "useAtIndex": "off",
+        "noNestedTernary": "off",
+        "useBlockStatements": "off"
+      },
+      "complexity": {
+        "useOptionalChain": "off"
+      },
+      "correctness": {
+        "useExhaustiveDependencies": "off"
       },
       "suspicious": {
-        "useAwait": "off"
+        "useAwait": "off",
+        "noArrayIndexKey": "off"
       },
       "nursery": {
         "noLeakedRender": "off"

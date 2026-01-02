@@ -133,7 +133,7 @@ export default function ConversationSidebar({
                   <div className="flex items-start justify-between">
                     <div className="min-w-0 flex-1">
                       <div className="mb-1 flex items-center space-x-2">
-                        <MessageCircle className="h-4 w-4 flex-shrink-0 text-gray-400" />
+                        <MessageCircle className="h-4 w-4 shrink-0 text-gray-400" />
 
                         <h3 className="truncate font-medium text-gray-900 text-sm">
                           {conversation.messages.length > 0
