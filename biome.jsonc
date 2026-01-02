@@ -24,7 +24,8 @@
       "style": {
         "useImportType": "off",
         "useConsistentTypeDefinitions": "off",
-        "noNonNullAssertion": "off"
+        "noNonNullAssertion": "off",
+        "useAtIndex": "off"
       },
       "suspicious": {
         "useAwait": "off"
